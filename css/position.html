@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Document</title>
+    <style>
+        .fixed{
+            position:fixed;
+            height:10px;
+        }
+        .sticky{
+            position:fixed;
+            top:0px;
+        }
+        .relative{
+            position:relative;
+            left:50px;
+            height:100vh;
+            border:solid 10px green;
+        }
+        .child{
+            position:absolute;
+            top:150px;
+            left:200px;
+            padding:10px;
+            boder:dotted 5px red;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, magni. Rerum atque corporis nulla commodi, aspernatur nisi dolores illo neque repudiandae cupiditate quia, enim distinctio reiciendis placeat harum animi alias nesciunt. Nemo doloremque illo velit, voluptate ullam delectus exercitationem, qui modi minima, cupiditate reprehenderit! Eum maxime ut ipsum dolore neque.</p>
+<div class="fixed">
+    <span>fixed</span>
+</div>
+<div class="sticky">
+<span>sticky</span>
+</div>
+<div class="relative">
+    <span>relative</span>
+    <div class="child">
+    <span>absolute</span>
+</div>
+</div>
+</body>
+</html>
