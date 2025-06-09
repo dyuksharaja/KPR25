@@ -12,7 +12,6 @@
 #two{
     color:rgb(0, 80, 4);
 }
-#three{
     color:rgb(238, 130, 130);
 }
 #four,#five,#six{
@@ -20,8 +19,8 @@
 }
 .link{
     text-decoration:none;
-    color:brown;
-    background-color:chocolate;
+    color:rgb(255, 0, 0);
+    background-color:rgb(17, 219, 47);
     padding:10px;
     border-radius: 10px;
 }

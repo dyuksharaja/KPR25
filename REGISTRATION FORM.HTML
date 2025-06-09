@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+    <style>
+        h1 {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name"><br>
+
+        <label for="department">Department</label>
+        <input type="text" id="department" placeholder="Enter your department"><br>
+
+        <label for="registernumber">Register Number</label>
+        <input type="number" id="registernumber" placeholder="Enter your number"><br>
+
+        <label for="batch">Batch</label>
+        <input type="text" id="batch" placeholder="Enter your batch"><br>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+        <ol id="display"></ol>
+    </form>
+
+    <script>
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const department = document.getElementById('department').value;
+            const registernumber = document.getElementById('registernumber').value;
+            const batch = document.getElementById('batch').value;
+
+            if (!name || !department || !registernumber || !batch) {
+                alert("Please fill in all fields before submitting.");
+                return;
+            }
+
+            const displayList = document.getElementById('display');
+            displayList.innerHTML = ""; 
+
+            const details = [name, department, registernumber, batch];
+            const labels = ["Name", "Department", "Register Number", "Batch"];
+
+            details.forEach((value, index) => {
+                const li = document.createElement('li');
+                li.innerText = `${labels[index]}: ${value}`;
+                displayList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
